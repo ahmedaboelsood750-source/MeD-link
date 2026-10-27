@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | MedLink</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">🦷 MedLink</a>
+    <a href="index.html">Home</a>
+  </header>
+
+  <main class="form-page">
+    <form id="registerForm" class="form-card">
+      <h1>Create Account</h1>
+      <p class="muted">Join the MedLink community</p>
+
+      <label for="role">How do you want to join?</label>
+      <select id="role" name="role" required>
+        <option value="">Choose your role</option>
+        <option value="patient">Patient</option>
+        <option value="student">Dental Student</option>
+      </select>
+
+      <label for="name">Full Name</label>
+      <input id="name" name="name" required
+             placeholder="Enter your full name">
+
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email"
+             required placeholder="example@email.com">
+
+      <label for="phone">Phone Number</label>
+      <input id="phone" name="phone" type="tel"
+             required placeholder="Enter your phone">
+
+      <label for="age">Age</label>
+      <input id="age" name="age" type="number"
+             min="1" max="120" required placeholder="Your age">
+
+      <div id="patientFields" class="role-fields" hidden>
+        <label for="location">City / Location</label>
+        <input id="location" name="location"
+               placeholder="Enter your city">
+
+        <label for="concern">Dental Concern</label>
+        <textarea id="concern" name="concern"
+          placeholder="Describe your dental concern"></textarea>
+      </div>
+
+      <div id="studentFields" class="role-fields" hidden>
+        <label for="university">University</label>
+        <input id="university" name="university"
+               placeholder="University name">
+
+        <label for="year">Academic Year</label>
+        <select id="year" name="year">
+          <option value="">Select your year</option>
+          <option>First Year</option>
+          <option>Second Year</option>
+          <option>Third Year</option>
+          <option>Fourth Year</option>
+          <option>Fifth Year</option>
+          <option>Intern</option>
+        </select>
+      </div>
+
+      <label for="password">Password</label>
+      <input id="password" name="password"
+             type="password" minlength="8" required
+             placeholder="At least 8 characters">
+
+      <label class="check-row">
+        <input type="checkbox" id="terms" required>
+        I agree to the terms and privacy policy.
+      </label>
+
+      <button class="btn full" type="submit">Create Account</button>
+      <p class="form-footer">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+      <p id="registerMessage" class="message" aria-live="polite"></p>
+    </form>
+  </main>
+</body>
+</html>

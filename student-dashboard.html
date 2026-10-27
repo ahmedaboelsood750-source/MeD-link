@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | MedLink</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="student">
+  <header class="navbar">
+    <a href="index.html" class="logo">🦷 MedLink</a>
+    <nav>
+      <a href="student-dashboard.html">Dashboard</a>
+      <a href="appointments.html">My Appointments</a>
+      <a href="profile.html">Profile</a>
+      <button class="btn" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h1 id="welcomeTitle">Student Dashboard</h1>
+    <p class="muted">Review patient requests and manage your schedule.</p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Available Requests</h3>
+        <p>Browse requests submitted by patients.</p>
+      </article>
+      <article class="card">
+        <h3>My Appointments</h3>
+        <p>Track accepted requests and scheduled visits.</p>
+        <a href="appointments.html">View Schedule →</a>
+      </article>
+      <article class="card">
+        <h3>Academic Profile</h3>
+        <p>Update your university and academic year.</p>
+        <a href="profile.html">Edit Profile →</a>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Patient Requests</h2>
+      <p class="muted">
+        Only requests suitable for your verified student role
+        should be handled under qualified supervision.
+      </p>
+      <div id="studentRequests" class="cards"></div>
+    </section>
+  </main>
+</body>
+</html>

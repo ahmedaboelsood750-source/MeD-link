@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard | MedLink</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="patient">
+  <header class="navbar">
+    <a href="index.html" class="logo">🦷 MedLink</a>
+    <nav>
+      <a href="patient-dashboard.html">Dashboard</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="profile.html">Profile</a>
+      <button class="btn" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h1 id="welcomeTitle">Patient Dashboard</h1>
+    <p class="muted">Manage your dental care requests.</p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Find Dental Care</h3>
+        <p>Explore available dental care opportunities.</p>
+        <a href="#requestForm" class="btn">Request Care</a>
+      </article>
+      <article class="card">
+        <h3>My Appointments</h3>
+        <p>Review your submitted requests and appointments.</p>
+        <a href="appointments.html">View Appointments →</a>
+      </article>
+      <article class="card">
+        <h3>My Profile</h3>
+        <p>Keep your contact information updated.</p>
+        <a href="profile.html">Edit Profile →</a>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Request Dental Care</h2>
+      <form id="requestForm" class="form-card">
+        <label for="service">Service Needed</label>
+        <select id="service" required>
+          <option value="">Choose a service</option>
+          <option>Dental Checkup</option>
+          <option>Oral Hygiene Consultation</option>
+          <option>Dental Education</option>
+          <option>Supervised Clinical Assessment</option>
+        </select>
+
+        <label for="requestDetails">Additional Information</label>
+        <textarea id="requestDetails"
+          placeholder="Tell us about your request"></textarea>
+
+        <label for="requestDate">Preferred Date</label>
+        <input id="requestDate" type="date" required>
+
+        <button class="btn full" type="submit">Submit Request</button>
+        <p id="requestMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>My Recent Requests</h2>
+      <div id="patientRequests" class="cards"></div>
+    </section>
+  </main>
+</body>
+</html>

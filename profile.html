@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | MedLink</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🦷 MedLink</a>
+    <nav>
+      <a href="appointments.html">Appointments</a>
+      <button class="btn" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <form id="profileForm" class="form-card">
+      <h1>My Profile</h1>
+      <p class="muted">Update your personal information.</p>
+
+      <label for="profileName">Full Name</label>
+      <input id="profileName" required>
+
+      <label for="profileEmail">Email</label>
+      <input id="profileEmail" type="email" disabled>
+
+      <label for="profilePhone">Phone Number</label>
+      <input id="profilePhone" type="tel" required>
+
+      <label for="profileAge">Age</label>
+      <input id="profileAge" type="number" min="1" max="120" required>
+
+      <div id="profilePatientFields" class="role-fields" hidden>
+        <label for="profileLocation">City / Location</label>
+        <input id="profileLocation">
+
+        <label for="profileConcern">Dental Concern</label>
+        <textarea id="profileConcern"></textarea>
+      </div>
+
+      <div id="profileStudentFields" class="role-fields" hidden>
+        <label for="profileUniversity">University</label>
+        <input id="profileUniversity">
+
+        <label for="profileYear">Academic Year</label>
+        <select id="profileYear">
+          <option>First Year</option>
+          <option>Second Year</option>
+          <option>Third Year</option>
+          <option>Fourth Year</option>
+          <option>Fifth Year</option>
+          <option>Intern</option>
+        </select>
+      </div>
+
+      <button class="btn full" type="submit">Save Changes</button>
+      <p id="profileMessage" class="message"></p>
+    </form>
+  </main>
+</body>
+</html>

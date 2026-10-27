@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | MedLink</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">🦷 MedLink</a>
+    <a href="index.html">Home</a>
+  </header>
+
+  <main class="form-page">
+    <form id="loginForm" class="form-card">
+      <h1>Welcome Back!</h1>
+      <p class="muted">Login to your MedLink account</p>
+
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email"
+             required placeholder="example@email.com">
+
+      <label for="password">Password</label>
+      <input id="password" name="password"
+             type="password" required placeholder="Your password">
+
+      <button class="btn full" type="submit">Login</button>
+      <p id="loginMessage" class="message" aria-live="polite"></p>
+
+      <p class="form-footer">
+        Don't have an account?
+        <a href="register.html">Create Account</a>
+      </p>
+    </form>
+  </main>
+</body>
+</html>
